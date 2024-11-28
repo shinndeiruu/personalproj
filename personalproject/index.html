@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Side Hustle App - Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div id="branding">
+        <h1><span class="highlight">Side Hustle</span> App</h1>
+      </div>
+      <nav>
+        <ul>
+          <li class="current"><a href="index.html">Home</a></li>
+          <li><a href="profiles.html">Profiles</a></li>
+          <li><a href="jobs.html">Jobs</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <section id="showcase">
+    <div class="container">
+      <h1>Find Your Next Side Hustle</h1>
+      <p>Connect with local opportunities or showcase your skills</p>
+    </div>
+  </section>
+  <script>
+  // DOM element references for toggling
+  const jobFormSection = document.getElementById('jobFormSection');
+  const toggleJobFormBtn = document.getElementById('toggleJobFormBtn');
+  const profileFormSection = document.getElementById('profileFormSection');
+  const toggleProfileFormBtn = document.getElementById('toggleProfileFormBtn');
+
+  // Event listeners for toggling job and profile forms
+  toggleJobFormBtn.addEventListener('click', () => {
+    if (jobFormSection.style.display === 'none' || !jobFormSection.style.display) {
+      jobFormSection.style.display = 'block';
+      toggleJobFormBtn.textContent = 'Hide Job Form';
+    } else {
+      jobFormSection.style.display = 'none';
+      toggleJobFormBtn.textContent = 'Show Job Form';
+    }
+  });
+
+  toggleProfileFormBtn.addEventListener('click', () => {
+    if (profileFormSection.style.display === 'none' || !profileFormSection.style.display) {
+      profileFormSection.style.display = 'block';
+      toggleProfileFormBtn.textContent = 'Hide Profile Form';
+    } else {
+      profileFormSection.style.display = 'none';
+      toggleProfileFormBtn.textContent = 'Show Profile Form';
+    }
+  });
+
+  // Existing form submission logic for job and profile forms here
+  // displayJobs() and displayProfiles() functions
+</script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jobs</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Job Postings</h1>
+    <a href="index.html" style="color: white;">Home</a>
+  </header>
+
+  <section class="container">
+    <!-- Buttons to toggle the job form visibility and shuffle jobs -->
+    <div class="button-container">
+      <button id="toggleJobFormBtn" class="btn">Show Job Form</button>
+      <button id="shuffleJobsBtn" class="btn">Shuffle Jobs</button>
+      <div class="search-container">
+        <input type="text" id="searchJobsInput" placeholder="Search jobs..." class="search-input">
+        <button id="searchJobsBtn" class="btn">Search</button>
+      </div>
+    </div>
+
+    <!-- Job Form Section (initially hidden) -->
+    <div id="jobFormSection" class="form-section">
+      <div id="dragAreaJob" class="drag-area">
+        <h2>Create Job Posting</h2>
+        <form id="jobForm">
+          <div class="form-group">
+            <label for="jobTitle">Job Title:</label>
+            <input type="text" id="jobTitle" name="jobTitle" required>
+          </div>
+          <div class="form-group">
+            <label for="companyName">Company Name:</label>
+            <input type="text" id="companyName" name="companyName" required>
+          </div>
+          <div class="form-group">
+            <label for="jobDescription">Job Description:</label>
+            <textarea id="jobDescription" name="jobDescription" required></textarea>
+          </div>
+          <div class="form-group">
+            <label for="jobLocation">Location:</label>
+            <input type="text" id="jobLocation" name="jobLocation" required>
+          </div>
+          <button type="submit" class="btn">Create Job</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Section to List the Submitted Jobs -->
+    <h2>Submitted Job Postings</h2>
+    <div id="jobList">
+      <!-- Job postings will appear here after submission -->
+    </div>
+  </section>
+
+  <footer>
+    <!-- Any additional footer content goes here -->
+  </footer>
+
+  <script src="jobScript.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Your Profile</h1>
+    <a href="index.html" style="color: white;">Home</a>
+  </header>
+
+  <section class="container">
+    <!-- Buttons to toggle the profile form visibility and shuffle profiles -->
+    <div class="button-container">
+      <button id="toggleProfileFormBtn" class="btn">Show Profile Form</button>
+      <button id="shuffleProfilesBtn" class="btn">Shuffle Profiles</button>
+      <div class="search-container">
+        <input type="text" id="searchProfilesInput" placeholder="Search profiles..." class="search-input">
+        <button id="searchProfilesBtn" class="btn">Search</button>
+      </div>
+    </div>
+
+    <!-- Profile Form Section (initially hidden) -->
+    <div id="profileFormSection" class="form-section">
+      <div id="dragAreaProfile" class="drag-area">
+        <h2>Create Your Profile</h2>
+        <form id="profileForm">
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="skills">Skills:</label>
+            <input type="text" id="skills" name="skills" required>
+          </div>
+          <div class="form-group">
+            <label for="experience">Experience:</label>
+            <textarea id="experience" name="experience" required></textarea>
+          </div>
+          <div class="form-group">
+            <label for="availability">Availability:</label>
+            <input type="text" id="availability" name="availability" required>
+          </div>
+          <button type="submit" class="btn">Create Profile</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Section to List the Submitted Profiles -->
+    <h2>Submitted Profiles</h2>
+    <div id="profileList">
+      <!-- Profiles will appear here after submission -->
+    </div>
+  </section>
+
+  <footer>
+    <!-- Any additional footer content goes here -->
+  </footer>
+
+  <script src="profileScript.js"></script>
+</body>
+</html>

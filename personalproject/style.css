@@ -1,0 +1,308 @@
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+}
+
+.container {
+  margin: 20px;
+}
+
+/* Form Section Styling */
+.form-section {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 300px;
+  height: auto;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 15px;
+  display: none; /* Initially hidden */
+  z-index: 1000;
+  transition: all 0.3s ease-in-out; /* Smooth transition for show/hide */
+}
+
+.form-section h2 {
+  font-size: 18px;
+  margin: 0;
+  font-weight: bold;
+}
+
+.form-section .form-group input,
+.form-section .form-group textarea {
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background: #f1f1f1;
+  font-size: 14px;
+}
+
+.form-section textarea {
+  height: 80px;
+}
+
+.form-section .form-group input:focus,
+.form-section textarea:focus {
+  border-color: #5ab9ea;
+}
+
+.form-section .btn {
+  background-color: #5ab9ea;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 14px;
+}
+
+.form-section .btn:hover {
+  background-color: #4b98c5;
+}
+
+/* Toggle Button Styling */
+.btn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+/* Make the drag area moveable */
+.drag-area {
+  cursor: move; /* Makes the cursor appear as a move icon */
+  margin-bottom: 10px;
+}
+
+/* Add these styles to your existing CSS file */
+
+#profileList {
+  display: flex;
+  flex-wrap: wrap; /* Allows items to wrap to the next line */
+  gap: 20px; /* Space between the profile boxes */
+  justify-content: flex-start; /* Align items to the start */
+}
+
+.profile-entry {
+  width: calc(20% - 20px); /* Set the width to 20% so that we can have 5 items in a row */
+  border: 1px solid #ddd; /* Add a border to each profile box */
+  padding: 15px;
+  box-sizing: border-box; /* Ensure padding is included in the width calculation */
+  background-color: #f9f9f9; /* Set a light background color */
+  border-radius: 8px; /* Optional: rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  text-align: center;
+}
+
+.profile-entry h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.profile-entry p {
+  margin: 5px 0;
+  font-size: 1rem;
+  word-wrap: break-word; /* Ensure text wraps within the box */
+}
+
+/* Styles for the job list container */
+#jobList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;  /* Center the job entries horizontally */
+  gap: 20px;  /* Add spacing between job cards */
+  overflow-y: auto;  /* Allow vertical scrolling */
+  max-height: 80vh;  /* Limit the height to make it scrollable */
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Styles for each job card */
+.job-card {
+  width: 90%;  /* Make the job card take up most of the container width */
+  max-width: 600px;  /* Limit the max width */
+  background-color: #ffffff;  /* White background for the card */
+  padding: 20px;
+  border-radius: 15px;  /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* Soft shadow */
+  border: 1px solid #ddd;  /* Add border for separation */
+  background-color: #f9f9f9;  /* Light background color for better contrast */
+  transition: transform 0.3s ease;  /* Smooth hover effect */
+  margin-bottom: 20px; /* Space between job cards */
+  box-sizing: border-box; /* Ensure padding is included in the width calculation */
+}
+
+/* Add separation for job information inside the card */
+.job-card div {
+  border: 1px solid #ddd; /* Border to separate each section of info */
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px; /* Rounded corners for inner info boxes */
+  background-color: #fff; /* White background for inner info */
+  word-wrap: break-word; /* Ensure text wraps within the box */
+}
+
+/* Job card hover effect */
+.job-card:hover {
+  transform: translateY(-5px);  /* Lift up the card when hovered */
+}
+
+/* Job title style */
+.job-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+/* Job description style */
+.job-card p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  line-height: 1.5;
+  color: #555;
+  word-wrap: break-word; /* Ensure text wraps within the box */
+}
+
+/* Job card footer with action buttons */
+.job-card footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.job-card footer .apply-btn {
+  background-color: #3b82f6;  /* Blue button */
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.job-card footer .apply-btn:hover {
+  background-color: #2563eb;  /* Darker blue on hover */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+  #jobList {
+    padding: 10px;
+  }
+  .job-card {
+    width: 100%;
+  }
+}
+
+/* Button Container Styling */
+.button-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.button-container .btn {
+  margin-right: 10px; /* Space between buttons */
+}
+
+/* Search Container Styling */
+.search-container {
+  display: flex;
+  align-items: center;
+  margin-left: auto; /* Push the search container to the right */
+}
+
+.search-input {
+  width: 200px; /* Adjust width as needed */
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background: #f1f1f1;
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+.search-input:focus {
+  border-color: #5ab9ea;
+}
+/* Make the drag area moveable */
+.drag-area {
+  cursor: move; /* Makes the cursor appear as a move icon */
+  margin-bottom: 10px;
+}
+
+/* Make the form section absolutely positioned */
+.form-section {
+  position: absolute; /* Changed from fixed to absolute */
+  bottom: 20px;
+  right: 20px;
+  width: 300px;
+  height: auto;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 15px;
+  display: none; /* Initially hidden */
+  z-index: 1000;
+  transition: all 0.3s ease-in-out; /* Smooth transition for show/hide */
+}
+/* Make the drag area moveable */
+.drag-area {
+  cursor: move; /* Makes the cursor appear as a move icon */
+  margin-bottom: 10px;
+}
+
+/* Make the form section absolutely positioned */
+.form-section {
+  position: absolute; /* Changed from fixed to absolute */
+  bottom: 20px;
+  right: 20px;
+  width: 300px;
+  height: auto;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 15px;
+  display: none; /* Initially hidden */
+  z-index: 1000;
+  transition: all 0.3s ease-in-out; /* Smooth transition for show/hide */
+}
+/* Remove button styling */
+.remove-btn {
+  background-color: #dc3545; /* Red color */
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.remove-btn:hover {
+  background-color: #c82333; /* Darker red on hover */
+}
